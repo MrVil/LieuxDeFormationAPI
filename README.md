@@ -1,8 +1,8 @@
 # LieuxDeFormationAPI
 
-L'API est écrit en ASP.NET CORE, généré avec yo (https://github.com/OmniSharp/generator-aspnet)[aspnet] 
+L'API est écrit en ASP.NET CORE, généré avec yo [aspnet](https://github.com/OmniSharp/generator-aspnet)
 
-Vous avez besoin d'installer (https://get.asp.net/)[ASP.NET] et (https://nodejs.org)[Node.js]
+Vous avez besoin d'installer [ASP.NET](https://get.asp.net/) et [Node.js](https://nodejs.org)
 
 Ensuite, installez yeoman et le generateur aspnet.
 ```
