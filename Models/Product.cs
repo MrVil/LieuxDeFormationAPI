@@ -1,4 +1,4 @@
-namespace LieuxDeFormationAPI.Controllers
+namespace LieuxDeFormationAPI.Models
 {
     public class Product
     {
