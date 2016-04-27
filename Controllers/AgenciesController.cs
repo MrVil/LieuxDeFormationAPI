@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 
-using LieuxDeFormationAPI.Models;
+using LieuxDeFormationAPI.Models.TrainingProblem;
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace LieuxDeFormationAPI.Controllers
@@ -12,19 +12,12 @@ namespace LieuxDeFormationAPI.Controllers
     [Route("api/[controller]")]
     public class AgenciesController : Controller
     {
-        
-        Product[] products = new Product[] 
-        { 
-            new Product { Id = 1, Name = "Tomato Soup", Category = "Groceries", Price = 1 }, 
-            new Product { Id = 2, Name = "Yo-yo", Category = "Toys", Price = 3.75M }, 
-            new Product { Id = 3, Name = "Hammer", Category = "Hardware", Price = 16.99M } 
-        };
-        
+        List<Agency> agencies;
         // GET: api/values
         [HttpGet]
-        public IEnumerable<Product> Get()
+        public IEnumerable<Agency> Get()
         {
-            return products;
+            return agencies;
         }
 
         // GET api/values/5
@@ -36,8 +29,12 @@ namespace LieuxDeFormationAPI.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]string value)
         {
+            System.Diagnostics.Debug.WriteLine(value);
+            agencies.Add(new Agency());
+            return HttpBadRequest();
+
         }
 
         // PUT api/values/5
